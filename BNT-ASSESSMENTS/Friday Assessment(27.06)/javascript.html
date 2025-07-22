@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //most repeated character
+        function mostrepeatedchar(str){
+            const charcount={};
+            for(let char of str){
+                charcount[char]=(charcount[char] || 0)+1;
+            }
+            let maxcount=0;
+            let mostrepeated='';
+
+            for(let char in charcount){
+                if(charcount[char]>maxcount){
+                    maxcount=charcount[char];
+                    mostrepeated=char;
+                }
+            }
+            return mostrepeated;
+        }
+        console.log("Most repeated character ")
+        console.log(mostrepeatedchar('aabbbcc'));
+
+        //2.unique element 
+        function uniqueelements(arr1,arr2){
+
+            const uniqueArr1=arr1.filter(item=>!arr2.includes(item));
+             const uniqueArr2=arr2.filter(item=>!arr1.includes(item));
+             return [...uniqueArr1,...uniqueArr2];
+
+        }
+        
+        console.log(uniqueelements([1,2,3],[2,4,5]));
+
+        //longest word in an array
+        function longestWord(sentence) {
+  const words = sentence.split(" ");
+  let longest = "";
+
+  for (let word of words) {
+    if (word.length > longest.length) {
+      longest = word;
+    }
+  }
+  return longest;
+}
+
+console.log(longestWord("JavaScript is powerful"));
+
+        
+
+        //chainable function
+        function chain(num){
+            let result=num;
+               
+            function add(n){
+                result+=n;
+                return chainobj;
+            }
+            function sub(n){
+                result-=n;
+                return chainobj;
+            }
+
+            function getResult(){
+                return result;
+            }
+            const chainobj={
+                add,
+                sub,
+                result:getResult
+            };
+            return chainobj;
+        }
+        console.log(chain(5).add(2).sub(1).result());
+
+        //hoisting
+        // console.log(x);
+        // var a=10;
+        hoisting();
+         function hoisting(){
+            console.log( "Hoisting: Hii,I am Harini");
+         }
+
+        
+    </script>
+</body>
+</html>

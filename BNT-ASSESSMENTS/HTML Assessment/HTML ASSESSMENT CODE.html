@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 10px;
+            padding: 20px;
+            align-items: center;
+        }
+
+        ol {
+            list-style: none;
+            list-style-type: upper-alpha;
+        }
+
+        ul {
+            list-style: none;
+            list-style-type: square;
+
+        }
+
+        .Animation {
+            border: 2px red dotted;
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .transform {
+            border: 2px rgb(127, 110, 218) dotted;
+            background-color: bisque;
+            width: 100px;
+            height: 100px;
+        }
+
+        .transform:hover {
+            transform: scale(1.2);
+            transform: rotate(10deg);
+        }
+
+        .sticky {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: yellowgreen;
+            position: sticky;
+            top: 0;
+            left: 0;
+
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        @keyframes Animation {
+            form {
+
+                transition-duration: 0;
+            }
+
+            to {
+                transition-duration: 5sec;
+            }
+        }
+
+        .link {
+            text-decoration: none;
+            font-size: xx-large;
+        }
+
+        /* .image{
+            width: 20px;
+            height: 20px;
+        } */
+
+        .link:hover {
+            background-color: brown;
+        }
+
+        .bar {
+            background-color: aqua;
+            width: 900px height:20px display: flex;
+            justify-content: space-around;
+        }
+        thead{
+            background-color: bisque;
+            column-span: none;
+        }
+        th, td{
+            border: 2px black solid;
+            padding: 10 px;
+            text-align: center;
+        }
+        /* table{
+            border-collapse: collapse;
+        } */
+
+        .circle
+        {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 200px; 
+            animation-name: circle;
+            animation-duration: 5s;
+            
+           
+        }
+        @keyframes circle{
+            0%{
+                background-color: red;
+                transition-duration: 0;
+            }
+            25%{
+                background-color: yellow;
+                transition-duration: 8s;
+            }
+             50%{
+                background-color: rgb(10, 213, 17);
+                transition-duration: 0s;
+            }
+        75%{
+                background-color: blue;
+                transition-duration: 8s;
+            
+
+        }
+        100%{
+                background-color: rgb(204, 93, 37);
+                transition-duration: 8s;
+            
+
+        }
+        
+    }
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+        <ul>
+            <li><a href="www.google.com">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#product">products</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <div class="login">
+                 <li><img src= "C:\Users\parth\OneDrive\Desktop\WebpageTask\html\img3.png" alt="image" width="20" height="20"></li>
+                <li><a href="#login">Login</a></li>
+            </div>
+        </ul>
+    </nav>
+    </header>
+    <hr>
+
+
+    <div>
+        <h2>Output 2</h2>
+        <p>FITA is an <b>Online and Offline transformative</b> <i>upskilling platform</i> for working
+tech <del>and business</del> professionals.<sup>*</sup>&copy;</p>
+    </div>
+
+    <hr>
+
+    <form>
+        <h2>output 4</h2>
+        <div><input type="text" placeholder="Name"></div>
+        <div><input type="number" placeholder="Age"></div>
+        <div>
+            <label for="male">Male</label>
+            <input type="radio" id="male">
+            <label for="female">Female</label>
+            <input type="radio" id="female">
+        </div>
+
+        <div>
+            <input type="checkbox">"Do you like to cook?"
+        </div>
+
+        <div>
+            <input type="textarea" placeholder="Additional Comments" style="width: 200px; height: 50px;">
+        </div>
+    </form>
+    <hr>
+
+    <h2>Output 5</h2>
+    <ol>
+        <li>Chennai</li>
+        <li>Newyork</li>
+        <li>Mumbai</li>
+        <li>Busan</li>
+        <li>Banglore</li>
+    </ol>
+
+    <ul>
+        <li>Coke</li>
+        <li>Pepsi</li>
+        <li>Red Bull</li>
+    </ul>
+    <hr>
+
+    <h2>Output 7</h2>
+    <div class="Animation">
+        <p>Good Evening</p>
+    </div>
+
+    <hr>
+    <h2>output 8</h2>
+    <div class="transform">
+        Hello!
+    </div>
+
+    <hr>
+
+    <h2>output 10</h2>
+    <div>
+        <h4>Audio</h4>
+        <audio controls>
+            <source src="C:\Users\Lenovo\OneDrive\Desktop\Html\HTML Assessment\audio.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <div>
+        <h4>Video</h4>
+        <video controls>
+            <source src="C:\Users\Lenovo\OneDrive\Desktop\Html\HTML Assessment\video.mp4" type="video/mp4"
+                style="width: 70px; height: 70px;">
+        </video>
+    </div>
+
+    <hr>
+
+    <h2>output 12</h2>
+    <form></form>
+    <div>
+        Email : <input type="email" placeholder=" Enter Your Email" required>
+    </div>
+    <div>
+        Password: <input type="password" placeholder="Enter Your Password" required minlength="8">
+    </div>
+    <div>
+        <input type="checkbox">Remember Me
+    </div>
+    <div>
+        <button>Submit</button>
+    </div>
+    </form>
+
+    <hr>
+
+    <h2>output 13</h2>
+    <div class="sticky">
+        <h4>About</h4>
+        <h4>Services</h4>
+        <h4>Blog</h4>
+        <h4>Technology</h4>
+        <h4>Contact</h4>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam impedit minus velit quisquam incidunt vero quia sequi laudantium officia quas asperiores quaerat possimus nesciunt eaque ea, pariatur culpa recusandae distinctio iusto suscipit at commodi quod! Quibusdam quae cum modi facilis sapiente aut nulla voluptas animi voluptate blanditiis iste ad, temporibus harum placeat expedita iusto commodi deleniti excepturi veritatis vitae minima laborum dolor. In eligendi excepturi blanditiis quidem nihil ab ullam inventore ipsam, fugit cumque mollitia dolorem aperiam necessitatibus consectetur! Commodi minima accusamus ratione distinctio. Libero est quidem pariatur, iure magni optio, facilis laudantium molestiae modi nemo tempora nihil soluta possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat recusandae vel temporibus. Harum odio nulla quas voluptatem. Fugit ea, nisi odit veritatis quos quibusdam neque sequi itaque temporibus vitae eligendi deserunt voluptatem saepe possimus qui harum. Voluptas at, ipsam eveniet sapiente quasi consectetur quibusdam culpa magnam non quod cupiditate corrupti molestiae ducimus nihil. Saepe praesentium harum dolorem quaerat minima dignissimos a ipsa vel magnam assumenda officiis exercitationem quas vero inventore, tempora veniam magni laboriosam possimus eos nobis! Pariatur mollitia temporibus, repudiandae repellendus facilis harum amet vero hic iusto sequi laboriosam delectus est odit dignissimos, voluptate, dicta maxime nisi in officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit aut exercitationem enim perspiciatis magnam aperiam explicabo eius hic, eveniet laudantium, officiis corporis totam libero soluta architecto saepe fugit omnis maiores? Neque voluptatibus cum aliquam et necessitatibus reprehenderit debitis nemo at aspernatur ipsum velit cupiditate quis provident laudantium, laborum perferendis sed!</p>
+
+    <hr>
+
+    <h2>Output 2</h2>
+    <table>
+        <thead>
+            <tr>
+                <td>Title</td>
+                <td>Author</td>
+                <td>Publication Date</td>
+                <td>No.of.pages</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> Title 1</td>
+                <td>Author 1</td>
+                <td> 1/2/2002</td>
+                <td>459</td>
+            </tr>
+            <tr>
+                <td> Title 1</td>
+                <td>Author 1</td>
+                <td> 1/2/2002</td>
+                <td>459</td>
+            </tr>
+            <tr>
+                <td> Title 1</td>
+                <td>Author 1</td>
+                <td> 1/2/2002</td>
+                <td>459</td>
+            </tr>
+            <tr>
+                <td> Title 1</td>
+                <td>Author 1</td>
+                <td> 1/2/2002</td>
+                <td>459</td>
+            </tr>
+            <tr>
+                <td> Title 1</td>
+                <td>Author 1</td>
+                <td> 1/2/2002</td>
+                <td>459</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+<h2>output 9</h2>
+    <div class="circle">
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            color: gray;
+            display: flex;
+            justify-content: center;
+            margin: 100px;
+            animation-name: example;
+            animation-duration: 10s;
+            
+        }
+
+        /* div:hover
+        {
+            background-color: blanchedalmond;
+            width: 100px;
+            height: 100px;
+            transform: scale(1);
+            transition-timing-function: ease-in-out;
+        }
+        h4{
+            text-align: center;
+           
+        } */
+
+        @keyframes example{
+            0%{
+                background-color:greenyellow ;
+            }
+            20%{
+                background-color: rgb(57, 18, 131);
+            }
+            40%{
+                background-color: rgb(245, 52, 152);
+            }
+            60%{
+                background-color: rgb(31, 195, 19);
+            }
+            80%{
+                background-color: rgb(191, 98, 11);
+            }
+            10%{
+                background-color: rgb(210, 34, 31);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h4>Hey! It's a Transition</h4>
+    </div>
+</body>
+</html>

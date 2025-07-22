@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = "harini";
+        let char = 'A';
+        let num = 10;
+        console.log(typeof (str));
+        console.log(typeof (char));
+        console.log(typeof (num));
+
+        let a = "hello";
+        let b = 10;  
+        let i = "Harini";
+        console.log(i.charAt(3));
+
+        let j = "wellcome to programming";
+        console.log(j.lastIndexOf("to"));
+
+        var p = "80";
+        var q = Number(a);
+        console.log("Str into num:", q);
+        var add = q + q;
+        console.log("Add: ", add);
+
+        let s = "hello";
+        let n = Number(s);
+        console.log("Type of s:", typeof n);
+        console.log("Value of n:", n);
+
+        let m=1.2;
+        console.log(Number.isInteger(m))
+
+        let int=6.80;
+        let c=Number.parseInt(int);
+        let d=Number.parseFloat(int);
+        console.log(c);
+        console.log(d);
+
+        let x=23.6778;
+        let numb=Number(x);
+        let roundoff=x.toFixed(2);
+        console.log(roundoff)
+
+        let food="idli";
+        switch (food) {
+        case "dosa":
+          console.log("Yummy");
+          break;
+        case "biryani":
+          console.log("worth");
+          break;
+        case "idli":
+          console.log("okay");
+          break;
+        default:
+          console.log("not a food");
+      }
+
+       //VAR
+      //model1
+      var a1 = 10;
+      console.log("Var:",a1); 
+      //model2
+      {
+        var a2 = 10;
+      }
+      console.log("Var:",a2);
+      //model3
+      {
+        var a3 = 10;
+        a3 = 20;
+      }
+      console.log("Var:",a3); 
+      //LET
+      //model1
+      let b1 = 10;
+      console.log("Let:",b1);
+    //   //model2
+    //   {
+    //     let b2 = 10;
+    //   }
+    //   console.log("Let:",b2); //error
+      //model3
+      let b3 = 10;
+      b3 = 20;
+      console.log("Let:",b3);
+
+      // CONST
+      //model1
+      const c1 = 10;
+      console.log("Const:",c1);
+    // model2
+    //   {
+    //     const c2 = 10;  
+    //   }
+    //   console.log("Const:",c2); //error
+    //   //model3
+    //   const c3 = 10;
+    //   c3 = 20;
+    //   console.log("Const:",c3); //error
+
+      let animals=["lion","tiger","elephant"];
+      console.log(animals);
+      animals.push("bear");
+      console.log(animals);
+      animals.pop();
+      console.log(animals);
+      delete animals[2]
+      console.log(animals)
+
+      let cars= ["honda","BMW","Benz","audi","ferrari"];
+      cars.splice(2,1);
+      console.log("After Splice", cars);
+      cars.splice(1, 1, "lambo");
+      console.log("After Replace", cars);
+
+      let arr=[1,2,3,4,5,6,7];
+      console.log(arr.reverse());
+
+      let animal={
+        name:"lion",
+        weight:80
+
+      };
+        console.log("USing dot :");
+      console.log(animal.name);
+      console.log(animal.weight);
+
+      let name="priya";
+      let name2="dharshini";
+      console.log(name.concat(name2));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //revese string
+      console.log("String Reverse");
+      let name = "Harini";
+      let revstr = name.split("").reverse().join("");
+      console.log(revstr);
+
+      //largest number in a array
+      console.log("Largest number in a array");
+      const nums = [11, 23, 15, 67, 93, 9];
+      let large = 0;
+      for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > large) {
+          large = nums[i];
+        }
+      }
+      console.log(large);
+
+      //palindrome
+      function palindrome() {
+        let word = "hello";
+        let pal = word.split("").reverse().join("");
+        if (pal === word) {
+          console.log("palindrome");
+        } else {
+          console.log("not a pallindrome");
+        }
+      }
+      palindrome();
+
+      //no of vowels
+      function noofvowels(str) {
+        let vowels = "aeiouAEIOU";
+        let count = 0;
+        for (let i = 0; i < str.length; i++) {
+          if (vowels.includes(str[i])) {
+            count++;
+          }
+        }
+        return count;
+      }
+      console.log(noofvowels("Himalayas"));
+
+      //factorial
+      function factorial() {
+        let n = 4;
+        let fact = 1;
+        for (i = 1; i <= n; i++) {
+          fact = fact * i;
+          
+        }
+        console.log("factorial value is", fact);
+      }
+      factorial();
+
+      //prime no
+      function isPrime(num) {
+        if (num <= 1) return false;
+
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      console.log(isPrime(2));
+      console.log(isPrime(5));
+      console.log(isPrime(9));
+      console.log(isPrime(29));
+      console.log(isPrime(1));
+      
+
+      //remove duplicate
+      const arr=[11,24,8,64,24,45,11,63,8];
+      let arr1=[]
+      for(let i=0;i<arr.length;i++){
+        if(!arr1.includes(arr[i])){
+        arr1.push(arr[i]);
+        }
+      }
+      console.log(arr1);
+
+      //sum of array
+      const b=[2,4,6,8,10,12,14];
+      let b1=b.reduce((i,j)=>i+j);
+      console.log("sum of array is",b1);
+
+      //fibonacci sequence
+      function printFibonacci(n) {
+        let a = 0,
+          b = 1;
+        let result = [];
+
+        for (let i = 0; i < n; i++) {
+          result.push(a);
+          let next = a + b;
+          a = b;
+          b = next;
+        }
+
+        return result;
+      }
+      console.log(printFibonacci(10));
+
+
+
+      //firsr non repeating char
+       function firstNonRepeatingChar(str) {
+        const freq = {};
+
+        for (let char of str) {
+          freq[char] = (freq[char] || 0) + 1;
+        }
+
+        for (let char of str) {
+          if (freq[char] === 1) {
+            return char;
+          }
+        }
+
+        return null;
+      }
+      console.log(firstNonRepeatingChar("aabbcdd"));
+      console.log(firstNonRepeatingChar("swiss"));
+      console.log(firstNonRepeatingChar("aabbcc"));
+      
+
+      
+    </script>
+  </body>
+</html>
+                                                   

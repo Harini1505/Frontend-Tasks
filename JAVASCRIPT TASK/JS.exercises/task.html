@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <style>
+    .active {
+      color: rgb(15, 185, 211);
+      color: rgb(232, 7, 169);
+      font-weight: bold;
+    }
+    #box1 {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(63, 63, 77);
+      position: relative;
+    }
+  </style>
+
+  <body>
+    <!-- question 1 -->
+    <script>
+      const car = {
+        brand: "Toyota",
+        model: "Camry",
+        start: function () {
+          return `Starting ${this.brand} ${this.model}`;
+        },
+        stop: function () {
+          return `Stopping ${this.brand} ${this.model}`;
+        },
+      };
+
+      console.log(car.start());
+      console.log(car.stop());
+    </script>
+
+    <!-- question 2 -->
+     <h4>--manipulate html content--</h4>
+  <ul id="eat">
+    <li>Biscuit</li>
+    <li>Cake</li>
+    <li>Barfi</li>
+    <li>waffels</li>
+  </ul>
+  <button onclick="adding()">click me to add</button>
+
+  <script>
+    function adding() {
+      $("#eat").append("<li>Ice Cream</li>");
+      $("#eat").append("<li>cookie</li>");
+    }
+  </script>
+
+    <hr>
+    <!-- question 3 -->
+    <h4>--Add,Remove,Toggle--</h4>
+    <div id="myDiv">Hello, I'm Harini</div>
+    <br />
+    <button onclick="$('#myDiv').addClass('active')">Add Class</button>
+    <button onclick="$('#myDiv').removeClass('active')">Remove Class</button>
+    <button onclick="$('#myDiv').toggleClass('active')">Toggle Class</button>
+    <hr />
+    <!-- question 4 -->
+    <div
+      id="box"
+      style="width: 100px; height: 100px; background: rgb(133, 35, 35)"
+    ></div>
+
+    <script>
+      $("#box").hover(
+        function () {
+          $(this).css("background", "aqua");
+        }, // mouse in
+        function () {
+          $(this).css("background", "gray");
+        } // mouse out
+      );
+    </script>
+
+    <!-- question 5 -->
+    <script>
+      function add(a, b) {
+        return a + b;
+      }
+      console.log("Function: ");
+        
+
+      // let res = add(5, 3);
+      // console.log(res);
+
+      const add1 = (a, b) => a + b;
+      console.log("Arrow Function: ");
+      console.log(add(5, 5));
+    </script>
+
+    <!-- question 6 -->
+    <script>
+      let arr = [1, 2, 3, 4, 5];
+      console.log(arr.map((i) => i * 2)); //map
+      console.log(arr.filter((i) => i < 4)); //filter
+      console.log(arr.reduce((a, b) => a * b));
+    </script>
+
+    <!-- question 7 -->
+    <script>
+      function divideNumbers(a, b) {
+        try {
+          let result = a / b;
+
+          if (b === 0) {
+            throw new Error("Cannot divide by zero");
+          }
+
+          console.log("Result:", result);
+        } catch (error) {
+          console.log("Error occurred:", error.message);
+        } finally {
+          console.log("Execution completed.");
+        }
+      }
+
+      divideNumbers(10, 2);
+      //   divideNumbers(10, 0);
+    </script>
+    <hr />
+
+    <!-- question 8 -->
+    <input type="text" id="inputBox" value="enter your name" />
+    <br /><br />
+
+    <button id="getBtn">Get Value</button>
+    <button id="setBtn">Set Value</button>
+    <script>
+      $("#getBtn").click(function () {
+        let inputValue = $("#inputBox").val();
+        alert("Input Value is: " + inputValue);
+      });
+
+      $("#setBtn").click(function () {
+        $("#inputBox").val("Hello Beautiful");
+        $("#heading").text("Updated Heading");
+      });
+    </script>
+    <hr />
+    <!-- question 9 -->
+    <div id="box1"></div>
+    <br />
+    <button id="move">Animate</button>
+    <button id="fade">Fade Out</button>
+    <button id="slide">Slide Up</button>
+    <script>
+      $("#move").click(function () {
+        $("#box1").animate(
+          { left: "200px", height: "150px", width: "150px" },
+          1000
+        );
+      });
+
+      $("#fade").click(function () {
+        $("#box1").fadeOut(800);
+      });
+
+      $("#slide").click(function () {
+        $("#box1").slideUp(800);
+      });
+    </script>
+    <hr />
+
+    <!-- question 10 -->
+    <h2 id="countdown">10</h2>
+    <button onclick="startCountdown()">Start Countdown</button>
+    <script>
+      function startCountdown() {
+        let count = 10;
+        const display = document.getElementById("countdown");
+        const timer = setInterval(() => {
+          display.textContent = count;
+          count--;
+          if (count < 0) { 
+            clearInterval(timer);
+            display.textContent = "Time's up!";
+          }
+        }, 1000);
+      }
+    </script>
+    <hr />
+    <!-- question 11 -->
+    <div id="display">00:00:00</div>
+    <button onclick="startWatch()">Start</button>
+    <button onclick="stopWatch()">Stop</button>
+    <button onclick="resetWatch()">Reset</button>
+    <script>
+      let hrs = 0,
+        mins = 0,
+        secs = 0;
+      let interval = null;
+
+      function updateDisplay() {
+        const formatted =
+          String(hrs).padStart(2, "0") +
+          ":" +
+          String(mins).padStart(2, "0") +
+          ":" +
+          String(secs).padStart(2, "0");
+        document.getElementById("display").textContent = formatted;
+      }
+
+      function startWatch() {
+        if (interval) return; // prevent multiple intervals
+
+        interval = setInterval(() => {
+          secs++;
+          if (secs === 60) {
+            secs = 0;
+            mins++;
+            if (mins === 60) {
+              mins = 0;
+              hrs++;
+            }
+          }
+          updateDisplay();
+        }, 1000);
+      }
+
+      function stopWatch() {
+        clearInterval(interval);
+        interval = null;
+      }
+
+      function resetWatch() {
+        stopWatch();
+        hrs = mins = secs = 0;
+        updateDisplay();
+      }
+
+      updateDisplay();
+    </script>
+  </body>
+</html>

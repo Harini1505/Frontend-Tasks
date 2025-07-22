@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.parent{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+        .one {
+            background-color: darkgoldenrod;
+            height: 100px;
+            flex-basis: 20%;
+            margin: 5px;
+        }
+
+        .two {
+            background-color: yellowgreen;
+            height: 100px;
+            flex-basis: 20%;
+            margin: 5px;
+        }
+
+        .three {
+            background-color: gold;
+            height: 100px;
+            flex-basis: 20%;
+            margin: 5px;
+        }
+
+        .four {
+            background-color: greenyellow;
+            height: 100px;
+            flex-basis: 20%;
+            margin: 5px;
+        }
+
+        @media screen and (max-width:800px) {
+            .one{
+                flex-basis: 40%;
+            }
+            .two{
+                flex-basis: 40%;
+            }
+            .three{
+                flex-basis: 40%;
+            }
+            .four{
+                flex-basis: 40%;
+            }
+            
+        }
+
+        @media screen and (max-width:600px) {
+            .one{
+                flex-basis: 100%;
+            }
+            .two{
+                flex-basis: 100%;
+            }
+            .three{
+                flex-basis: 100%;
+            }
+            .four{
+                flex-basis: 100%;
+            }
+            
+        }
+
+       
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="one">
+            hello
+        </div>
+
+        <div class="two">
+            hello
+        </div>
+
+        <div class="three">
+            hello
+        </div>
+
+        <div class="four">
+            hello
+        </div>
+    </div>
+
+</body>
+
+</html>

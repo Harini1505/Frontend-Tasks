@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+        .parent1 ol{
+            list-style: none;
+            padding-left: 20px;
+            font-size: x-large;
+            font-family: monospace;
+
+        }
+        .parent1 li::before
+        {
+            content:'\2606';
+            color:rebeccapurple ;
+            
+        }
+
+        .parent2 ul{
+            list-style: none;
+            padding-left: 20px;
+            font-size: x-large;
+            font-family: monospace;
+
+        }
+        .parent2 li::before
+        {
+            content: '\2713';
+            color: red;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent1">
+        <h1>Water Transport</h1>
+        <ol>
+            <li>Ship</li>
+            <li>Boat</li>
+            <li>yacht</li>
+            <li>Cruise</li>
+            <li>Submarine</li>
+        </ol>
+    </div>
+    <br>
+    <br>
+
+    <div class="parent2">
+        <h1>Road Transport</h1>
+        <ul>
+            <li>Car</li>
+            <li>Bus</li>
+            <li>Bike</li>
+            <li>Auto</li>
+            <li>Lorry</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

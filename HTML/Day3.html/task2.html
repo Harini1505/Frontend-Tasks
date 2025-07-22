@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        .pseudo {
+            border: 2px rebeccapurple solid;
+            width: 300px;
+            height: 300px;
+            margin-left: 150px;
+            margin-top: 150px;
+            background-color: bisque;
+         }
+         p{
+            text-align: center;
+            font-size: x-large;
+            font-family: cursive;
+         }
+         .pseudo:hover {
+            background-color: aqua;
+         }
+
+         p:hover::before {
+            content: "INDIA- ";
+            color: rgb(224, 110, 9);
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+            
+         }
+         p:hover::after {
+            content: " -INDIA";
+            color: rgb(224, 110, 9);
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+            
+         }
+         /* .pseudo::after{
+            position: absolute;
+            top: 50px;
+         }
+         .pseudo::before {
+            position: absolute;
+            top: 50px;
+
+         } */
+    </style>
+</head>
+
+<body>
+    <div class="pseudo">
+        <p>India is My Country</p>
+    </div>
+</body>
+
+</html>

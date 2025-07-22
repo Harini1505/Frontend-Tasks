@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock Paper Scissors Game</title>
+</head>
+<body>
+  <script>
+let a="harini";
+let b='5';
+console.log(a==b);
+console.log(a===b);
+
+    function playGame() {
+      const choices = ["rock", "paper", "scissors"];
+      
+      // Get user input
+      let userChoice = prompt("Choose rock, paper, or scissors:").toLowerCase();
+
+      // Validate input
+      if (!choices.includes(userChoice)) {
+        alert("Invalid choice.");
+        return;
+      }
+
+      // Generate computer choice
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+      // Show choices
+      alert(`Computer chose: ${computerChoice}`);
+
+      // Determine the result
+      let result;
+      if (userChoice === computerChoice) {
+        result = "It's a draw!";
+      } else if (
+        (userChoice === "rock" && computerChoice === "scissors") ||
+        (userChoice === "paper" && computerChoice === "rock") ||
+        (userChoice === "scissors" && computerChoice === "paper")
+      ) {
+        result = "You win!";
+      } else {
+        result = "You lose!";
+      }
+
+      alert(result);
+    }
+
+    // Ask to play
+    if (confirm("Would like to play Rock, Paper, Scissors?")) {
+      playGame();
+    } else {
+      alert("OOPs! You have Cancelled the game");
+    }
+  </script>
+</body>
+</html>

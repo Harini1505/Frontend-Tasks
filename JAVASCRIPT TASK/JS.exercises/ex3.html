@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Falsy</title>
+</head>
+
+<body>
+    <!-- <script>
+        const falsevalues = ["false", "0", "","undefined"];
+        const truevalues = ["true", "1", "hello", "[]", "{}", "0", "-1"];
+        let score = 0;
+        function truefalsy() {
+
+            let userChoice = prompt("okay.. chose a value")
+
+            if (!falsevalues.includes(userchoice)) {
+                alert("It's not a suitable value.Try Again");
+            }
+            if (!truevalues.includes(userchoice)) {
+                alert("It's not a suitable value.Try Again");
+            }
+
+            if (userChoice === truevalues) {
+                score++;
+            }
+            else if (userchoise === falsevalues) {
+                score--;
+            }
+
+
+            if (confirm("Would like to Play Truth or Falsy Game")) {
+                truefalsy();
+            } else {
+                alert("OOPs! You have Cancelled the game");
+            }
+        }
+    </script> -->
+<script>
+    const falseValues = ["false","0","","undefined","null","NaN"];
+const trueValues  = ["true","1","hello","[]","{}","-1"];
+let score = 0;
+
+function trueFalsyGame() {
+  while (true) {
+    let userInput = prompt("Choose a value:");
+
+    if (falseValues.includes(userInput)) {
+      alert("That’s a falsy value!");
+      score--;
+    } else if (trueValues.includes(userInput)) {
+      alert("That’s a truthy value!");
+      score++;
+    } else {
+      alert("Invalid input. Try again.");
+      continue;
+    }
+
+    if (!confirm("Do you Wanna Play again?")) {
+      alert(`Game over!!. Your score: ${score}`);
+      break;
+    }
+  }
+}
+
+trueFalsyGame();
+</script>
+</body>
+
+</html>
